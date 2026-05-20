@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 釜山行程｜11/8–11/11</title>
+  <style>
+    :root{
+      --bg:#f7f3ec;
+      --paper:#fffaf2;
+      --ink:#24201d;
+      --muted:#746b62;
+      --line:#e7dccd;
+      --accent:#9b5f3b;
+      --accent2:#2f6f73;
+      --card:#ffffff;
+      --shadow:0 16px 36px rgba(64,42,26,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+        "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(155,95,59,.14), transparent 34rem),
+        radial-gradient(circle at top right, rgba(47,111,115,.12), transparent 30rem),
+        var(--bg);
+      line-height:1.65;
+    }
+    .wrap{max-width:1120px;margin:0 auto;padding:32px 20px 64px}
+    header{
+      padding:44px 36px;
+      border-radius:28px;
+      background:linear-gradient(135deg, rgba(255,250,242,.96), rgba(255,255,255,.88));
+      box-shadow:var(--shadow);
+      border:1px solid rgba(231,220,205,.8);
+      position:relative;
+      overflow:hidden;
+    }
+    header:after{
+      content:"";
+      position:absolute;
+      width:260px;height:260px;border-radius:50%;
+      background:rgba(47,111,115,.10);
+      right:-90px;top:-120px;
+    }
+    .eyebrow{
+      font-size:14px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--accent);
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    h1{
+      font-size:clamp(34px, 6vw, 64px);
+      line-height:1.05;
+      margin:0 0 16px;
+      letter-spacing:-.04em;
+    }
+    .subtitle{
+      max-width:740px;
+      color:var(--muted);
+      font-size:18px;
+      margin:0;
+    }
+    .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+    .tag{
+      background:#fff;
+      border:1px solid var(--line);
+      color:#4d443d;
+      padding:8px 13px;
+      border-radius:999px;
+      font-size:14px;
+      box-shadow:0 6px 14px rgba(64,42,26,.05);
+    }
+    nav{
+      margin:26px 0 24px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--ink);
+      background:rgba(255,255,255,.72);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+      box-shadow:0 8px 18px rgba(64,42,26,.05);
+      transition:.18s ease;
+    }
+    nav a:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    nav small{display:block;color:var(--muted);font-size:12px}
+    nav strong{font-size:16px}
+    .grid{display:grid;grid-template-columns:1fr;gap:24px}
+    .day{
+      background:rgba(255,250,242,.78);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+    .day-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+      border-bottom:1px solid var(--line);
+      padding-bottom:18px;
+    }
+    .date{
+      color:var(--accent2);
+      font-weight:800;
+      letter-spacing:.04em;
+      margin-bottom:4px;
+    }
+    h2{
+      margin:0;
+      font-size:30px;
+      letter-spacing:-.03em;
+      line-height:1.15;
+    }
+    .theme{
+      align-self:center;
+      color:#fff;
+      background:var(--accent2);
+      border-radius:999px;
+      padding:8px 13px;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    .timeline{display:grid;gap:14px}
+    .item{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:18px;
+      background:var(--card);
+      border:1px solid rgba(231,220,205,.85);
+      border-radius:20px;
+      padding:18px;
+    }
+    .time{
+      color:var(--accent);
+      font-weight:800;
+      font-size:15px;
+      padding-top:2px;
+    }
+    .item h3{
+      margin:0 0 6px;
+      font-size:20px;
+      line-height:1.25;
+    }
+    .item p{margin:0;color:var(--muted)}
+    ul{margin:8px 0 0 1.1em;padding:0;color:var(--muted)}
+    .note{
+      margin-top:22px;
+      border-left:5px solid var(--accent);
+      background:rgba(155,95,59,.08);
+      border-radius:16px;
+      padding:16px 18px;
+      color:#5d4638;
+    }
+    .summary{
+      margin-top:26px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+    .summary-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      box-shadow:0 8px 18px rgba(64,42,26,.05);
+    }
+    .summary-card strong{display:block;margin-bottom:4px;color:var(--accent2)}
+    .print{
+      margin-top:28px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    @media(max-width:820px){
+      nav,.summary{grid-template-columns:1fr 1fr}
+      .day-head{display:block}
+      .theme{display:inline-block;margin-top:12px}
+      .item{grid-template-columns:1fr}
+      .time{font-size:14px}
+    }
+    @media(max-width:520px){
+      .wrap{padding:18px 12px 42px}
+      header,.day{border-radius:22px;padding:24px 18px}
+      nav,.summary{grid-template-columns:1fr}
+      h2{font-size:25px}
+    }
+    @media print{
+      body{background:#fff}
+      .wrap{max-width:none;padding:0}
+      header,.day,.summary-card,.item{box-shadow:none;break-inside:avoid}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Busan Food & Culture Trip</div>
+      <h1>2026 釜山行程<br>11/8–11/11</h1>
+      <p class="subtitle">以高品質海鮮、韓牛燒肉、韓國感性空間、海景與咖啡為主。不走瘋狂踩點路線，偏向舒服、有主題的成熟旅行節奏。</p>
+      <div class="tags">
+        <span class="tag">東海海鮮</span>
+        <span class="tag">韓牛燒肉</span>
+        <span class="tag">感性空間</span>
+        <span class="tag">Specialty Coffee</span>
+        <span class="tag">海雲台收尾</span>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#d1108"><small>Day 1</small><strong>11/8 機張海鮮</strong></a>
+      <a href="#d1109"><small>Day 2</small><strong>11/9 西面吃喝</strong></a>
+      <a href="#d1110"><small>Day 3</small><strong>11/10 高級韓牛</strong></a>
+      <a href="#d1111"><small>Day 4</small><strong>11/11 海雲台</strong></a>
+    </nav>
+
+    <section class="grid">
+      <article class="day" id="d1108">
+        <div class="day-head">
+          <div>
+            <div class="date">11/8（日）</div>
+            <h2>機張／東海海鮮日</h2>
+          </div>
+          <div class="theme">蟹＋鮑魚</div>
+        </div>
+        <div class="timeline">
+          <div class="item"><div class="time">上午</div><div><h3>首爾 → 釜山（金海機場）</h3><p>抵達後前往飯店 check-in。</p></div></div>
+          <div class="item"><div class="time">中午</div><div><h3>百年土種蔘雞湯</h3><p>第一餐安排韓式補身料理，避免一開始就吃太 heavy。</p></div></div>
+          <div class="item"><div class="time">下午</div><div><h3>海東龍宮寺</h3><p>釜山代表性海邊寺廟，海景漂亮，11 月氣氛好，適合慢慢散步。</p></div></div>
+          <div class="item"><div class="time">傍晚第一攤</div><div><h3>기장명품대게 Premium Crab Busan</h3><p>主攻 박달대게（高級雪蟹）與東海蟹類，偏高品質路線。</p></div></div>
+          <div class="item"><div class="time">晚上第二攤</div><div><h3>탐복</h3><p>主攻鮑魚與海鮮料理，和蟹的方向不同，不會重複。</p></div></div>
+        </div>
+      </article>
+
+      <article class="day" id="d1109">
+        <div class="day-head">
+          <div>
+            <div class="date">11/9（一）</div>
+            <h2>西面／感性燒肉／獨島蝦日</h2>
+          </div>
+          <div class="theme">Local food＋蝦</div>
+        </div>
+        <div class="timeline">
+          <div class="item"><div class="time">早餐</div><div><h3>café（自由）</h3><p>輕鬆開始一天。</p></div></div>
+          <div class="item"><div class="time">中午</div><div><h3>수변최고돼지국밥 롯데부산본점</h3><p>釜山代表性豬肉湯飯流派。</p><ul><li>建議飯分開</li><li>先喝原湯</li><li>再加蝦醬與韭菜</li></ul></div></div>
+          <div class="item"><div class="time">下午</div><div><h3>樂天百貨（西面）</h3><p>可逛地下食品、韓國醬料、傳統酒、小菜、零食。</p></div></div>
+          <div class="item"><div class="time">晚餐 1</div><div><h3>올드맨션（Old Mansion）</h3><p>感性系韓式燒肉店。空間感好、店內乾淨、偏成熟大人感，不像傳統油煙燒肉店。</p></div></div>
+          <div class="item"><div class="time">晚餐 2</div><div><h3>울릉도 꽃새우</h3><p>主攻 독도새우（獨島蝦）與 꽃새우，偏東海高級海鮮路線。晚上氣氛較完整，適合配酒慢慢吃。</p></div></div>
+        </div>
+      </article>
+
+      <article class="day" id="d1110">
+        <div class="day-head">
+          <div>
+            <div class="date">11/10（二）</div>
+            <h2>高級韓牛日</h2>
+          </div>
+          <div class="theme">韓式感性＋韓牛</div>
+        </div>
+        <div class="timeline">
+          <div class="item"><div class="time">上午</div><div><h3>古蹟／自由安排（未定）</h3><p>候補方向：東萊古蹟、韓式老城區、韓屋建築。目前保留彈性。</p></div></div>
+          <div class="item"><div class="time">下午</div><div><h3>Ha:nok café</h3><p>韓式感性 café。特色是韓屋元素、木造空間、安靜舒服、偏成熟韓式美學。</p></div></div>
+          <div class="item"><div class="time">晚上</div><div><h3>Woominam（Centum）</h3><p>本趟主力高級韓牛。韓牛品質強、有稀少部位、空間成熟乾淨，不走觀光燒肉路線。</p></div></div>
+        </div>
+      </article>
+
+      <article class="day" id="d1111">
+        <div class="day-head">
+          <div>
+            <div class="date">11/11（三）</div>
+            <h2>海雲台收尾日</h2>
+          </div>
+          <div class="theme">咖啡＋Fine Dining</div>
+        </div>
+        <div class="timeline">
+          <div class="item"><div class="time">早餐</div><div><h3>자연도소금빵（自然島鹽可頌）</h3><p>釜山人氣鹽麵包。外酥內濕潤、奶油感強、鹽味平衡很好。</p></div></div>
+          <div class="item"><div class="time">上午咖啡</div><div><h3>MOMOS Coffee（海雲台）</h3><p>韓國知名 specialty coffee，不是單純網美 café，很適合當旅行收尾。</p></div></div>
+          <div class="item"><div class="time">中午</div><div><h3>Le DORER</h3><p>海雲台 fine dining 收尾。安排午餐版，不會太趕，吃完還有時間整理行李，白天氣氛更舒服。</p></div></div>
+          <div class="item"><div class="time">下午</div><div><h3>海雲台散步</h3><p>自由放鬆：海邊、café、小店、放空。</p></div></div>
+          <div class="item"><div class="time">傍晚</div><div><h3>前往機場</h3><p>回飯店拿行李，前往機場，虎航回台。</p></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="summary">
+      <div class="summary-card"><strong>11/8</strong>東海海鮮（蟹＋鮑魚）</div>
+      <div class="summary-card"><strong>11/9</strong>釜山 local food＋感性燒肉＋獨島蝦</div>
+      <div class="summary-card"><strong>11/10</strong>高級韓牛＋韓式感性空間</div>
+      <div class="summary-card"><strong>11/11</strong>海雲台 café＋fine dining 收尾</div>
+    </section>
+
+    <div class="note">
+      這次不是瘋狂觀光踩點旅行，而是以高品質吃喝、韓國空間感、海鮮文化、韓牛文化、specialty coffee、海景與放鬆為主的成熟大人系釜山旅行。
+    </div>
+
+    <p class="print">可直接分享此 HTML；手機與桌機皆可閱讀，也可列印成 PDF。</p>
+  </div>
+</body>
+</html>
