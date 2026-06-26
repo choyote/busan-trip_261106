@@ -5,141 +5,618 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2026 首爾＋釜山行程｜11/6–11/11</title>
 <style>
-:root{--bg:#f6f2eb;--card:#fffdf9;--line:#e6ddd1;--text:#24201d;--muted:#6d665f;--accent:#8a5a3c;--accent2:#467978;--soft:#f1e7dc}
+:root{
+  --bg:#f6f2eb;
+  --card:#fffdf9;
+  --line:#e6ddd1;
+  --text:#24201d;
+  --muted:#6d665f;
+  --accent:#8a5a3c;
+  --accent2:#467978;
+  --soft:#f1e7dc;
+  --warn:#b77b30;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at top left,rgba(138,90,60,.13),transparent 34rem),radial-gradient(circle at top right,rgba(70,121,120,.12),transparent 30rem),var(--bg);color:var(--text);line-height:1.7}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;
+  background:
+    radial-gradient(circle at top left,rgba(138,90,60,.13),transparent 34rem),
+    radial-gradient(circle at top right,rgba(70,121,120,.12),transparent 30rem),
+    var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
 .wrap{max-width:1150px;margin:auto;padding:36px 20px 80px}
-header{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:46px;margin-bottom:28px;box-shadow:0 14px 34px rgba(0,0,0,.06)}
-.eyebrow{color:var(--accent);font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}
+header{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:46px;
+  margin-bottom:28px;
+  box-shadow:0 14px 34px rgba(0,0,0,.06);
+}
+.eyebrow{
+  color:var(--accent);
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
 h1{margin:0;font-size:clamp(38px,6vw,58px);line-height:1.05;letter-spacing:-.04em}
 .subtitle{margin-top:16px;font-size:18px;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .tag{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:#4d443d;font-size:14px}
 nav{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:24px 0}
-nav a{text-decoration:none;color:var(--text);background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:0 8px 18px rgba(0,0,0,.04)}
+nav a{
+  text-decoration:none;color:var(--text);
+  background:rgba(255,255,255,.72);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px 16px;
+  box-shadow:0 8px 18px rgba(0,0,0,.04)
+}
 nav small{display:block;color:var(--muted);font-size:12px}
 nav strong{font-size:15px}
 .grid{display:grid;gap:24px}
-.day{background:rgba(255,253,249,.86);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 10px 26px rgba(0,0,0,.045)}
-.dayhead{display:flex;justify-content:space-between;gap:18px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+.day{
+  background:rgba(255,253,249,.86);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:30px;
+  box-shadow:0 10px 26px rgba(0,0,0,.045);
+}
+.dayhead{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  padding-bottom:18px;
+  margin-bottom:22px
+}
 .dayhead h2{margin:0;font-size:32px;letter-spacing:-.03em}
 .theme{background:var(--accent2);color:#fff;padding:8px 15px;border-radius:999px;font-size:14px;white-space:nowrap}
 .timeline{display:grid;gap:16px}
-.item{display:grid;grid-template-columns:125px 1fr;gap:20px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
+.item{
+  display:grid;
+  grid-template-columns:125px 1fr;
+  gap:20px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:20px
+}
 .time{font-weight:800;color:var(--accent);font-size:15px}
 h3{margin:0 0 8px;font-size:23px;line-height:1.25}
 p{margin:0;color:var(--muted)}
 .meta{display:grid;gap:4px;margin-top:10px;font-size:15px;color:var(--muted)}
 .meta span{display:block}
 ul{margin:10px 0 0 20px;padding:0;color:var(--muted)}
-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:12px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin-top:12px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff
+}
 th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
 th{background:var(--soft);color:#493a30}
 tr:last-child td{border-bottom:none}
+.note{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:#fff8ec;
+  border:1px solid #ead4b8;
+  color:#7a542b;
+  font-size:14px;
+}
 .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
 .summary-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
 .summary-card strong{display:block;color:var(--accent2);margin-bottom:4px}
-@media(max-width:900px){nav,.summary{grid-template-columns:1fr 1fr}.dayhead{display:block}.theme{display:inline-block;margin-top:10px}.item{grid-template-columns:1fr}}
-@media(max-width:560px){.wrap{padding:18px 12px 44px}header,.day{border-radius:22px;padding:24px 18px}nav,.summary{grid-template-columns:1fr}.dayhead h2{font-size:25px}h3{font-size:20px}th,td{font-size:14px}}
-@media print{body{background:#fff}.wrap{max-width:none;padding:0}header,.day,.item,.summary-card{box-shadow:none;break-inside:avoid}nav{display:none}}
+@media(max-width:900px){
+  nav,.summary{grid-template-columns:1fr 1fr}
+  .dayhead{display:block}
+  .theme{display:inline-block;margin-top:10px}
+  .item{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .wrap{padding:18px 12px 44px}
+  header,.day{border-radius:22px;padding:24px 18px}
+  nav,.summary{grid-template-columns:1fr}
+  .dayhead h2{font-size:25px}
+  h3{font-size:20px}
+  th,td{font-size:14px}
+}
+@media print{
+  body{background:#fff}
+  .wrap{max-width:none;padding:0}
+  header,.day,.item,.summary-card{box-shadow:none;break-inside:avoid}
+  nav{display:none}
+}
 </style>
 </head>
+
 <body>
 <div class="wrap">
+
 <header>
-<div class="eyebrow">Seoul & Busan Itinerary</div>
-<h1>2026 首爾＋釜山行程<br>11/6–11/11</h1>
-<div class="subtitle">住宿、KTX、景點、餐廳、韓文地址、電話、營業時間與地鐵整理。</div>
-<div class="tags"><span class="tag">Seoul Station</span><span class="tag">KTX</span><span class="tag">Haeundae</span><span class="tag">MCR Concert</span><span class="tag">Restaurant Info</span></div>
+  <div class="eyebrow">Seoul & Busan Itinerary</div>
+  <h1>2026 首爾＋釜山行程<br>11/6–11/11</h1>
+  <div class="subtitle">住宿、KTX、景點、餐廳、韓文地址、電話、營業時間、地鐵與交通整理。</div>
+  <div class="tags">
+    <span class="tag">Seoul Station</span>
+    <span class="tag">KTX</span>
+    <span class="tag">Haeundae</span>
+    <span class="tag">Seongsu</span>
+    <span class="tag">Songdo</span>
+    <span class="tag">Restaurant Info</span>
+  </div>
 </header>
 
 <nav>
-<a href="#d1106"><small>Day 1</small><strong>11/6 抵達</strong></a>
-<a href="#d1107"><small>Day 2</small><strong>11/7 首爾</strong></a>
-<a href="#d1108"><small>Day 3</small><strong>11/8 KTX</strong></a>
-<a href="#d1109"><small>Day 4</small><strong>11/9 西面</strong></a>
-<a href="#d1110"><small>Day 5</small><strong>11/10 金井山城</strong></a>
-<a href="#d1111"><small>Day 6</small><strong>11/11 海雲台</strong></a>
+  <a href="#d1106"><small>Day 1</small><strong>11/6 抵達</strong></a>
+  <a href="#d1107"><small>Day 2</small><strong>11/7 首爾</strong></a>
+  <a href="#d1108"><small>Day 3</small><strong>11/8 機張</strong></a>
+  <a href="#d1109"><small>Day 4</small><strong>11/9 西面</strong></a>
+  <a href="#d1110"><small>Day 5</small><strong>11/10 松島</strong></a>
+  <a href="#d1111"><small>Day 6</small><strong>11/11 海雲台</strong></a>
 </nav>
 
 <section class="grid">
 
 <article class="day" id="hotels">
-<div class="dayhead"><h2>住宿資訊</h2><div class="theme">Hotels</div></div>
-<div class="timeline">
-<div class="item"><div class="time">首爾</div><div><h3>Modern Apt Near Seoul Station 3min I 20 off on long-term stay</h3><div class="meta"><span>地址（英文）：Cheongpa-ro, Yongsan-gu, Seoul</span><span>地址（韓文）：서울특별시 용산구 청파로</span><span>最近地鐵：首爾站 / Seoul Station（서울역）</span><span>建議出口：15 號出口方向</span><span>訂房平台：Booking.com</span><span>入住方式：Self check-in</span><span>備註：有電梯</span></div></div></div>
-<div class="item"><div class="time">釜山</div><div><h3>海雲台華美達安可酒店</h3><p>Ramada Encore by Wyndham Busan Haeundae<br>라마다앙코르 바이 윈덤 부산 해운대</p><div class="meta"><span>地址（英文）：9 Gunam-ro, Haeundae-gu, Busan</span><span>地址（韓文）：부산광역시 해운대구 구남로 9</span><span>最近地鐵：海雲台站 / Haeundae Station（해운대역）</span><span>建議出口：3 號出口</span><span>訂房平台：Agoda</span><span>Check-in：15:00</span><span>Check-out：11:00</span></div></div></div>
-</div>
+  <div class="dayhead"><h2>住宿資訊</h2><div class="theme">Hotels</div></div>
+  <div class="timeline">
+    <div class="item">
+      <div class="time">首爾</div>
+      <div>
+        <h3>Modern Apt Near Seoul Station 3min I 20 off on long-term stay</h3>
+        <div class="meta">
+          <span>訂房平台：Booking.com</span>
+          <span>地址（英文）：Cheongpa-ro, Yongsan-gu, Seoul</span>
+          <span>地址（韓文）：서울특별시 용산구 청파로</span>
+          <span>最近地鐵：首爾站 / Seoul Station（서울역）</span>
+          <span>建議出口：15 號出口方向</span>
+          <span>入住方式：Self check-in</span>
+          <span>備註：有電梯</span>
+          <span>Check-in / Check-out：待房東確認</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">釜山</div>
+      <div>
+        <h3>海雲台華美達安可酒店</h3>
+        <p>Ramada Encore by Wyndham Busan Haeundae<br>라마다앙코르 바이 윈덤 부산 해운대</p>
+        <div class="meta">
+          <span>訂房平台：Agoda</span>
+          <span>地址（英文）：9 Gunam-ro, Haeundae-gu, Busan</span>
+          <span>地址（韓文）：부산광역시 해운대구 구남로 9</span>
+          <span>最近地鐵：海雲台站 / Haeundae Station（해운대역）</span>
+          <span>建議出口：3 號出口</span>
+          <span>Check-in：15:00</span>
+          <span>Check-out：11:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </article>
 
 <article class="day" id="d1106">
-<div class="dayhead"><h2>11/6（五） 桃園 → 首爾</h2><div class="theme">Arrival</div></div>
-<div class="timeline">
-<div class="item"><div class="time">20:00</div><div><h3>桃園機場出發</h3><p>台灣時間 20:00 航班。</p></div></div>
-<div class="item"><div class="time">23:30 左右</div><div><h3>抵達仁川機場</h3><p>搭計程車前往首爾站住宿（約 60–80 分鐘）。</p></div></div>
-</div>
+  <div class="dayhead"><h2>11/6（五） 桃園 → 首爾</h2><div class="theme">Arrival</div></div>
+  <div class="timeline">
+    <div class="item">
+      <div class="time">20:00</div>
+      <div>
+        <h3>桃園機場出發</h3>
+        <p>台灣時間 20:00 航班。</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="time">23:30 左右</div>
+      <div>
+        <h3>抵達仁川機場</h3>
+        <p>搭計程車前往首爾站住宿（約 60–80 分鐘）。</p>
+      </div>
+    </div>
+  </div>
 </article>
+
 
 <article class="day" id="d1107">
-<div class="dayhead"><h2>11/7（六） 首爾／MCR 演唱會</h2><div class="theme">Seoul</div></div>
+<div class="dayhead"><h2>11/7（六） 首爾／聖水洞／MCR 演唱會</h2><div class="theme">Seoul + Incheon</div></div>
 <div class="timeline">
-<div class="item"><div class="time">上午</div><div><h3>景福宮（경복궁 / Gyeongbokgung）</h3><p>住宿 → 景福宮（約 20–30 分鐘）</p><div class="meta"><span>地址（英文）：161 Sajik-ro, Jongno-gu, Seoul</span><span>地址（韓文）：서울특별시 종로구 사직로 161</span><span>最近地鐵：景福宮站 / Gyeongbokgung Station（경복궁역）</span><span>建議出口：5 號出口</span><span>開放時間：09:00–18:00（11 月）</span></div></div></div>
-<div class="item"><div class="time">晚上</div><div><h3>MCR（My Chemical Romance）仁川演唱會</h3><p>首爾站 → 演唱會會場（地鐵約 70–90 分鐘）</p><div class="meta"><span>地點：Paradise City Culture Park</span><span>地址（英文）：186 Yeongjonghaeannam-ro 321beon-gil, Jung-gu, Incheon</span><span>地址（韓文）：인천광역시 중구 영종해안남로321번길 186</span><span>建議入場：18:00 左右</span><span>開演時間：19:00</span><span>回程：搭地鐵返回首爾站附近住宿（約 70–90 分鐘）</span></div></div></div>
+
+<div class="item"><div class="time">08:30</div><div>
+<h3>首爾站住宿 → 景福宮</h3>
+<p>從首爾站附近住宿出發，前往景福宮。</p>
+<div class="meta"><span>預估移動時間：約 20–30 分鐘</span></div>
+</div></div>
+
+<div class="item"><div class="time">09:00–11:00</div><div>
+<h3>景福宮（경복궁 / Gyeongbokgung）</h3>
+<div class="meta">
+<span>地址（英文）：161 Sajik-ro, Jongno-gu, Seoul</span>
+<span>地址（韓文）：서울특별시 종로구 사직로 161</span>
+<span>最近地鐵：景福宮站 / Gyeongbokgung Station（경복궁역）</span>
+<span>建議出口：5 號出口</span>
+<span>開放時間：09:00–18:00（11 月）</span>
+<span>重點：光化門、勤政殿、慶會樓、香遠亭（依開放狀況）</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">11:00</div><div>
+<h3>景福宮 → 聖水洞</h3>
+<p>前往聖水洞午餐。</p>
+<div class="meta"><span>預估移動時間：約 30–40 分鐘</span></div>
+</div></div>
+
+<div class="item"><div class="time">11:30</div><div>
+<h3>Gebang Sikdang Seongsu（게방식당 성수점）</h3>
+<p>聖水洞醬蟹午餐。建議訂 11:30。</p>
+<div class="meta">
+<span>地址（英文）：126 Achasan-ro, Seongdong-gu, Seoul</span>
+<span>地址（韓文）：서울특별시 성동구 아차산로 126</span>
+<span>最近地鐵：聖水站 / Seongsu Station（성수역）</span>
+<span>電話：010-9834-1103</span>
+<span>營業時間：11:30–15:00 / 17:30–21:00</span>
+<span>推薦點法：醬蟹膏拌飯、Galbijjim（燉牛小排）、Gebang Dumpling（蟹肉蒸餃）</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">12:45–14:00</div><div>
+<h3>MUSINSA Megastore Seongsu（무신사 메가스토어 성수）</h3>
+<div class="meta">
+<span>地址（英文）：62 Seongsui-ro, Seongdong-gu, Seoul</span>
+<span>地址（韓文）：서울특별시 성동구 성수이로 62</span>
+<span>營業時間：11:00–22:00</span>
+<span>地鐵：聖水站 / Seongsu Station（성수역）</span>
+<span>安排：2F Beauty 區找千皂堂（Cheonbinusoap / 천비누솝），沒有就自由逛美妝品牌</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">14:00–14:30</div><div>
+<h3>聖水洞 → 仁川機場／Paradise City</h3>
+<p>不回首爾站，直接從聖水洞出發前往仁川機場旁會場。</p>
+<div class="meta">
+<span>建議路線：聖水站 / Seongsu Station（성수역）→ 弘大入口站 / Hongik Univ. Station（홍대입구역）→ AREX → 仁川機場</span>
+<span>抵達仁川機場後前往 Paradise City Culture Park</span>
+<span>預估移動時間：約 80–100 分鐘，依轉乘與現場接駁調整</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">晚上</div><div>
+<h3>MCR（My Chemical Romance）仁川演唱會</h3>
+<p>會場在仁川機場旁，聖水洞結束後直接前往。</p>
+<div class="meta">
+<span>地點：Paradise City Culture Park</span>
+<span>地址（英文）：186 Yeongjonghaeannam-ro 321beon-gil, Jung-gu, Incheon</span>
+<span>地址（韓文）：인천광역시 중구 영종해안남로321번길 186</span>
+<span>建議入場：18:00 左右</span>
+<span>開演時間：19:00</span>
+<span>回程：演唱會結束後搭地鐵返回首爾站附近住宿（約 70–90 分鐘）</span>
+</div>
+</div></div>
+
 </div>
 </article>
 
+
 <article class="day" id="d1108">
-<div class="dayhead"><h2>11/8（日） KTX 南下／機張海鮮</h2><div class="theme">Gijang</div></div>
-<div class="timeline">
-<div class="item"><div class="time">上午</div><div><h3>首爾站搭 KTX → 釜山站</h3><table><tr><th>首爾站出發</th><th>釜山站到達</th><th>備註</th></tr><tr><td>05:12</td><td>07:49</td><td>候補</td></tr><tr><td>05:27</td><td>08:00</td><td>候補</td></tr><tr><td>06:01</td><td>08:38</td><td>候補</td></tr><tr><td>06:16</td><td>08:59</td><td>目前預估</td></tr><tr><td>06:31</td><td>09:14</td><td>候補</td></tr></table><p style="margin-top:10px">釜山站 → 海雲台飯店（約 35–50 分鐘），放行李抓約 30 分鐘。</p></div></div>
-<div class="item"><div class="time">上午</div><div><h3>海東龍宮寺（해동용궁사）</h3><div class="meta"><span>預估停留：約 1–1.5 小時</span><span>順序：先海東龍宮寺，再吃蔘雞湯</span></div></div></div>
-<div class="item"><div class="time">中午</div><div><h3>百年土種蔘雞湯（백년토종삼계탕 부산점）</h3><div class="meta"><span>韓文地址：부산광역시 기장군 기장읍 동부산관광9로 15 1층 109호</span><span>電話：051-723-5535</span><span>營業時間：10:30–20:00</span></div></div></div>
-<div class="item"><div class="time">晚餐 1</div><div><h3>기장명품대게 Premium Crab Busan（기장명품대게）</h3><div class="meta"><span>韓文地址：부산광역시 기장군 기장읍 기장해안로 266</span><span>電話：051-722-2000</span><span>營業時間：09:30–21:00</span></div><ul><li>主攻 박달대게（高級雪蟹）與東海蟹類</li></ul></div></div>
-<div class="item"><div class="time">晚餐 2</div><div><h3>탐복</h3><div class="meta"><span>韓文地址：부산광역시 해운대구 달맞이길62번길 28</span><span>電話：051-742-0092</span><span>營業時間：10:30–16:00 / 17:00–20:30</span></div><ul><li>主攻鮑魚與海鮮料理</li></ul></div></div>
-</div>
+  <div class="dayhead"><h2>11/8（日） KTX 南下／海東龍宮寺／機張海鮮</h2><div class="theme">Gijang</div></div>
+  <div class="timeline">
+    <div class="item">
+      <div class="time">上午</div>
+      <div>
+        <h3>首爾站搭 KTX → 釜山站</h3>
+        <table>
+          <tr><th>首爾站出發</th><th>釜山站到達</th><th>備註</th></tr>
+          <tr><td>05:12</td><td>07:49</td><td>候補</td></tr>
+          <tr><td>05:27</td><td>08:00</td><td>候補</td></tr>
+          <tr><td>06:01</td><td>08:38</td><td>候補</td></tr>
+          <tr><td>06:16</td><td>08:59</td><td>目前預估</td></tr>
+          <tr><td>06:31</td><td>09:14</td><td>候補</td></tr>
+        </table>
+        <p style="margin-top:10px">釜山站 → 海雲台飯店（約 35–50 分鐘），寄放行李抓約 30 分鐘。</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">上午</div>
+      <div>
+        <h3>海東龍宮寺（해동용궁사）</h3>
+        <div class="meta">
+          <span>預估停留：約 1–1.5 小時</span>
+          <span>順序：先海東龍宮寺，再吃蔘雞湯</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">中午</div>
+      <div>
+        <h3>百年土種蔘雞湯（백년토종삼계탕 부산점）</h3>
+        <div class="meta">
+          <span>韓文地址：부산광역시 기장군 기장읍 동부산관광9로 15 1층 109호</span>
+          <span>電話：051-723-5535</span>
+          <span>營業時間：10:30–20:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午</div>
+      <div>
+        <h3>Ha:nok café（하녹 카페）</h3>
+        <p>海景韓屋咖啡廳，放在機張日最順。</p>
+        <div class="meta">
+          <span>地址（英文）：146-5 Naeri-gil, Gijang-eup, Gijang-gun, Busan</span>
+          <span>地址（韓文）：부산광역시 기장군 기장읍 내리길 146-5</span>
+          <span>電話：0507-1478-0075</span>
+          <span>營業時間：11:00–20:00（週末可能至 21:00）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">傍晚</div>
+      <div>
+        <h3>기장명품대게 Premium Crab Busan（기장명품대게）</h3>
+        <div class="meta">
+          <span>韓文地址：부산광역시 기장군 기장읍 차성동로73번길 5 1층</span>
+          <span>電話：051-724-0977</span>
+          <span>營業時間：09:30–21:00</span>
+        </div>
+        <ul><li>主攻 박달대게（高級雪蟹）與東海蟹類</li></ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">晚上</div>
+      <div>
+        <h3>탐복</h3>
+        <div class="meta">
+          <span>韓文地址：부산광역시 기장군 일광읍 문오성길 31</span>
+          <span>電話：051-727-4213</span>
+          <span>營業時間：10:30–16:00 / 17:00–20:30（部分日子晚餐休息，需再確認）</span>
+        </div>
+        <ul><li>主攻鮑魚與海鮮料理</li></ul>
+      </div>
+    </div>
+  </div>
 </article>
 
 <article class="day" id="d1109">
-<div class="dayhead"><h2>11/9（一） 西面／感性燒肉／獨島蝦</h2><div class="theme">Seomyeon</div></div>
-<div class="timeline">
-<div class="item"><div class="time">中午</div><div><h3>水邊最高豬肉湯飯 西面店（수변최고돼지국밥 서면점）</h3><div class="meta"><span>韓文地址：부산광역시 부산진구 중앙대로691번가길 24-13</span><span>最近地鐵：西面站 / Seomyeon Station（서면역）</span><span>電話：051-808-9889</span><span>營業時間：10:30–00:00</span></div></div></div>
-<div class="item"><div class="time">下午</div><div><h3>樂天百貨（西面）（롯데백화점 부산본점）</h3><div class="meta"><span>營業時間：10:30–20:00</span><span>地下 1 樓：食品／伴手禮</span><span>9 樓：樂天超市（Lotte Mart）</span></div><ul><li>可逛：韓國醬料、傳統酒、小菜、零食</li></ul></div></div>
-<div class="item"><div class="time">下午</div><div><h3>田浦咖啡街（전포카페거리）</h3><div class="meta"><span>西面站步行可達</span><span>café 自由安排</span></div></div></div>
-<div class="item"><div class="time">晚餐 1</div><div><h3>老宅邸（올드맨션 / Old Mansion）</h3><div class="meta"><span>韓文地址：부산광역시 해운대구 우동1로20번가길 28</span><span>最近地鐵：海雲台站 / Haeundae Station（해운대역）</span><span>電話：051-731-1237</span><span>營業時間：11:30–15:00 / 17:00–22:30</span></div></div></div>
-<div class="item"><div class="time">晚餐 2</div><div><h3>울릉도 꽃새우</h3><div class="meta"><span>韓文地址：부산광역시 부산진구 중앙대로691번가길 24-3</span><span>最近地鐵：西面站 / Seomyeon Station（서면역）</span><span>電話：051-808-8385</span><span>營業時間：11:30–22:00</span></div><ul><li>독도새우（獨島蝦）／꽃새우</li></ul></div></div>
-</div>
+  <div class="dayhead"><h2>11/9（一） 西面／百貨／老宅邸／獨島蝦</h2><div class="theme">Seomyeon</div></div>
+  <div class="timeline">
+    <div class="item">
+      <div class="time">09:00</div>
+      <div>
+        <h3>水邊最高豬肉湯飯 Centum 店</h3>
+        <p>早午餐。先在海雲台／Centum 方向吃完，再去西面。</p>
+        <div class="meta">
+          <span>韓文名：수변최고돼지국밥 센텀점</span>
+          <span>地址（英文）：26 Centum 3-ro, Haeundae-gu, Busan</span>
+          <span>地址（韓文）：부산광역시 해운대구 센텀3로 26</span>
+          <span>最近地鐵：Centum City 站 / Centum City Station（센텀시티역）</span>
+          <span>電話：0507-1481-8897</span>
+          <span>營業時間：08:00–21:40</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">10:30–13:30</div>
+      <div>
+        <h3>樂天百貨釜山本店（롯데백화점 부산본점）</h3>
+        <div class="meta">
+          <span>最近地鐵：西面站 / Seomyeon Station（서면역）</span>
+          <span>營業時間：10:30–20:00</span>
+          <span>地下 1 樓：食品／伴手禮</span>
+          <span>9 樓：樂天超市（Lotte Mart）</span>
+        </div>
+        <ul><li>可逛：地下食品、韓國醬料、傳統酒、小菜、零食</li></ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">14:00</div>
+      <div>
+        <h3>老宅邸（올드맨션 / Old Mansion）</h3>
+        <div class="meta">
+          <span>地址（英文）：17-6 Jeonpo-daero 209beon-gil, Busanjin-gu, Busan</span>
+          <span>地址（韓文）：부산광역시 부산진구 전포대로209번길 17-6 1층</span>
+          <span>最近地鐵：田浦站 / Jeonpo Station（전포역）或 西面站 / Seomyeon Station（서면역）</span>
+          <span>電話：010-8549-2211</span>
+          <span>營業時間：11:30–15:00 / 17:00–22:30</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">15:30–18:30</div>
+      <div>
+        <h3>田浦咖啡街（전포카페거리）</h3>
+        <div class="meta">
+          <span>最近地鐵：田浦站 / Jeonpo Station（전포역）</span>
+          <span>café 自由安排</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">19:00</div>
+      <div>
+        <h3>울릉도 꽃새우</h3>
+        <div class="meta">
+          <span>地址（英文）：50 Jinnam-ro, Nam-gu, Busan</span>
+          <span>地址（韓文）：부산광역시 남구 진남로 50</span>
+          <span>電話：010-8524-8714</span>
+          <span>營業時間：11:30–22:00</span>
+        </div>
+        <ul><li>독도새우（獨島蝦）／꽃새우</li></ul>
+      </div>
+    </div>
+  </div>
 </article>
+
 
 <article class="day" id="d1110">
-<div class="dayhead"><h2>11/10（二） MOMOS 本店／金井山城／韓牛</h2><div class="theme">North Busan</div></div>
-<div class="timeline">
-<div class="item"><div class="time">早餐</div><div><h3>MOMOS Coffee Flagship Store（모모스커피 본점）</h3><div class="meta"><span>地址（英文）：20 Osige-ro, Geumjeong-gu, Busan</span><span>韓文地址：부산광역시 금정구 오시게로 20</span><span>最近地鐵：溫泉場站 / Oncheonjang Station（온천장역）</span><span>電話：051-512-7036</span><span>營業時間：07:30–18:00</span></div></div></div>
-<div class="item"><div class="time">上午</div><div><h3>金井山城（금정산성 / Geumjeongsanseong Fortress）</h3><div class="meta"><span>建議區域：南門（남문）附近</span><span>溫泉場／金井山城動線可安排同一天</span><span>海雲台 → 金井山城：約 50–70 分鐘</span></div></div></div>
-<div class="item"><div class="time">下午</div><div><h3>Ha:nok café（하녹 카페）</h3><div class="meta"><span>韓文地址：부산광역시 해운대구 달맞이길117번가길 175</span><span>最近地鐵：中洞站 / Jung-dong Station（중동역）</span><span>電話：051-747-5507</span><span>營業時間：11:00–20:00</span></div></div></div>
-<div class="item"><div class="time">晚上</div><div><h3>Woominam（우미남 센텀）</h3><div class="meta"><span>韓文地址：부산광역시 해운대구 센텀남대로 35</span><span>最近地鐵：Centum City 站 / Centum City Station（센텀시티역）</span><span>電話：051-745-5656</span><span>營業時間：11:30–22:00</span></div></div></div>
-</div>
+  <div class="dayhead"><h2>11/10（二） 松島／影島／Woominam 韓牛</h2><div class="theme">Songdo + Yeongdo</div></div>
+  <div class="timeline">
+    <div class="item">
+      <div class="time">早餐</div>
+      <div>
+        <h3>MOMOS Coffee 海雲台／Marine City 店</h3>
+        <div class="meta">
+          <span>地址（英文）：91 Marine city 1-ro, Haeundae-gu, Busan, 101-dong 1F 101</span>
+          <span>地址（韓文）：부산광역시 해운대구 마린시티1로 91 101동 1층 101호</span>
+          <span>電話：051-512-7036</span>
+          <span>營業時間：07:00–18:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item"><div class="time">上午</div><div><h3>松島海水浴場（송도해수욕장 / Songdo Beach）</h3></div></div>
+    <div class="item"><div class="time">上午</div><div><h3>松島海上纜車（부산에어크루즈 / Busan Air Cruise）</h3><div class="meta"><span>備註：依當天天氣與排隊狀況調整</span></div></div></div>
+    <div class="item"><div class="time">上午</div><div><h3>松島天空步道（송도구름산책로 / Songdo Skywalk）</h3><div class="meta"><span>備註：與松島海上纜車同區域，可一起安排</span></div></div></div>
+
+    <div class="item">
+      <div class="time">午餐</div>
+      <div>
+        <h3>Jeju Bokguk（제주복국）</h3>
+        <p>河豚料理，午餐不會太重，保留晚上 Woominam 戰力。</p>
+        <div class="meta">
+          <span>地址（英文）：481 Jeoryeong-ro, Yeongdo-gu, Busan</span>
+          <span>地址（韓文）：부산광역시 영도구 절영로 481</span>
+          <span>電話：051-405-5050</span>
+          <span>營業時間：平日 10:00–20:30；週末 09:00–20:30</span>
+          <span>建議點法：참복 지리＋복튀김</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午</div>
+      <div>
+        <h3>白淺灘文化村（흰여울문화마을 / Huinnyeoul Culture Village）</h3>
+        <p>海景散步、拍照、慢慢走，不趕行程。</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午茶</div>
+      <div>
+        <h3>P.ARK（피아크）</h3>
+        <p>影島海景咖啡，重點是港口景觀與大空間。</p>
+        <div class="meta"><span>備註：咖啡不是唯一重點，這站以風景與放空為主</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">晚上</div>
+      <div>
+        <h3>Woominam（우미남 센텀）</h3>
+        <div class="meta">
+          <span>韓文地址：부산광역시 해운대구 센텀동로 102 센텀필1관 우미남 본인미트 1층</span>
+          <span>最近地鐵：Centum City 站 / Centum City Station（센텀시티역）</span>
+          <span>電話：010-8055-1352</span>
+          <span>營業時間：11:30–22:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </article>
 
+
 <article class="day" id="d1111">
-<div class="dayhead"><h2>11/11（三） 海雲台收尾／回台</h2><div class="theme">Haeundae</div></div>
-<div class="timeline">
-<div class="item"><div class="time">上午</div><div><h3>Haeundae Blue Line Park（해운대블루라인파크）</h3><div class="meta"><span>海岸列車／Sky Capsule</span><span>預估時間：約 1.5–2 小時</span><span>建議：依票況安排海岸列車或膠囊列車</span></div></div></div>
-<div class="item"><div class="time">中午</div><div><h3>Le DORER（르도레）</h3><div class="meta"><span>韓文地址：부산광역시 해운대구 달맞이길 30</span><span>最近地鐵：中洞站 / Jung-dong Station（중동역）</span><span>電話：051-742-3001</span><span>營業時間：12:30–14:30 / 18:00–22:00</span></div></div></div>
-<div class="item"><div class="time">下午</div><div><h3>BUSAN X the SKY（부산엑스더스카이）</h3><div class="meta"><span>地點：LCT Landmark Tower</span><span>預估時間：約 1–1.5 小時</span></div></div></div>
-<div class="item"><div class="time">下午</div><div><h3>自然島鹽可頌（자연도소금빵）</h3><div class="meta"><span>韓文地址：부산광역시 해운대구 구남로 17</span><span>最近地鐵：海雲台站 / Haeundae Station（해운대역）</span><span>電話：051-747-2245</span><span>營業時間：09:00–22:00</span></div><ul><li>海雲台散步／回飯店拿行李</li></ul></div></div>
-<div class="item"><div class="time">傍晚</div><div><h3>前往機場</h3><div class="meta"><span>虎航回台：20:50</span></div></div></div>
-</div>
+  <div class="dayhead"><h2>11/11（三） 海雲台收尾／回台</h2><div class="theme">Haeundae</div></div>
+  <div class="timeline">
+    <div class="item">
+      <div class="time">中午</div>
+      <div>
+        <h3>Le DORER（르도레）</h3>
+        <div class="meta">
+          <span>地址（英文）：Hanil Ordeu 213, 1435-3 U-dong, Haeundae-gu, Busan</span>
+          <span>地址（韓文）：부산광역시 해운대구 우동 1435-3 한일오르듀 213호</span>
+          <span>電話：051-747-8522</span>
+          <span>營業時間：12:30–14:30 / 18:00–22:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午</div>
+      <div>
+        <h3>自然島鹽可頌（자연도소금빵）</h3>
+        <div class="meta">
+          <span>韓文地址：부산광역시 해운대구 구남로 17</span>
+          <span>最近地鐵：海雲台站 / Haeundae Station（해운대역）</span>
+          <span>電話：051-747-2245</span>
+          <span>營業時間：09:00–22:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午</div>
+      <div>
+        <h3>海雲台散步</h3>
+        <p>海邊、咖啡、放空。</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午</div>
+      <div>
+        <h3>BUSAN X the SKY（부산엑스더스카이）</h3>
+        <div class="meta">
+          <span>地點：LCT Landmark Tower</span>
+          <span>預估時間：約 1–1.5 小時</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">下午</div>
+      <div>
+        <h3>Haeundae Blue Line Park（해운대블루라인파크）</h3>
+        <div class="meta">
+          <span>海岸列車／Sky Capsule</span>
+          <span>預估時間：約 1.5–2 小時</span>
+          <span>建議：依票況安排海岸列車或膠囊列車</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="time">傍晚</div>
+      <div>
+        <h3>返回飯店取行李 → 金海機場</h3>
+        <div class="meta">
+          <span>虎航回台：20:50</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </article>
 
 </section>
 
 <section class="summary">
-<div class="summary-card"><strong>11/6</strong>桃園 → 仁川 → 首爾站住宿</div>
-<div class="summary-card"><strong>11/7</strong>景福宮＋MCR 仁川演唱會</div>
-<div class="summary-card"><strong>11/8</strong>KTX 南下＋機張海鮮</div>
-<div class="summary-card"><strong>11/9</strong>西面＋百貨＋田浦＋燒肉＋獨島蝦</div>
-<div class="summary-card"><strong>11/10</strong>MOMOS 本店＋金井山城＋Woominam</div>
-<div class="summary-card"><strong>11/11</strong>Blue Line Park＋Le DORER＋X the SKY＋回台</div>
+  <div class="summary-card"><strong>11/6</strong>桃園 → 仁川 → 首爾站住宿</div>
+  <div class="summary-card"><strong>11/7</strong>景福宮＋Yun/Myeon Seoul＋聖水洞＋MCR</div>
+  <div class="summary-card"><strong>11/8</strong>KTX＋海東龍宮寺＋蔘雞湯＋Ha:nok＋機張海鮮</div>
+  <div class="summary-card"><strong>11/9</strong>Centum 豬肉湯飯＋樂天百貨＋老宅邸＋獨島蝦</div>
+  <div class="summary-card"><strong>11/10</strong>MOMOS＋松島＋Jeju Bokguk＋白淺灘＋P.ARK＋Woominam</div>
+  <div class="summary-card"><strong>11/11</strong>Le DORER＋自然島＋X the SKY＋Blue Line Park＋回台</div>
 </section>
 
 </div>
