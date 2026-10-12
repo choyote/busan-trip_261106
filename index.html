@@ -234,6 +234,9 @@ tr:last-child td{border-bottom:none}
   .day > .dayhead::after{right:17px;}
 }
 
+
+/* Restaurant menu translations */
+.menu-list{display:grid;gap:12px}.menu-entry{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}.menu-entry summary{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;list-style:none}.menu-entry summary::-webkit-details-marker{display:none}.menu-date{flex:0 0 auto;background:var(--soft);border-radius:9px;color:var(--accent);padding:4px 9px;font-weight:800}.menu-entry summary strong{display:block;font-size:17px}.menu-entry summary small{display:block;color:var(--muted);font-size:13px}.menu-chevron{margin-left:auto;font-size:23px;color:var(--accent)}.menu-entry[open] .menu-chevron{transform:rotate(45deg)}.menu-body{padding:0 18px 18px}.menu-hint{font-size:14px}.menu-table{min-width:560px}.menu-empty{text-align:center;color:var(--muted);font-size:14px}
 </style>
 </head>
 
@@ -259,6 +262,7 @@ tr:last-child td{border-bottom:none}
   <button class="site-tab" data-page="booking">預約</button>
   <button class="site-tab" data-page="todo">待辦事項</button>
   <button class="site-tab" data-page="transport">交通</button>
+  <button class="site-tab" data-page="restaurants">餐廳菜單</button>
   <button class="site-tab" data-page="shopping">購物清單</button>
 </div>
 
@@ -660,6 +664,35 @@ tr:last-child td{border-bottom:none}
   <h2>交通</h2>
   <p class="section-lead">先整理跨城市與當天最重要的長距離移動；細部地鐵出口之後可繼續補。</p>
 
+  <h3 class="group-title">✈️ 往返航班資訊</h3>
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>去程｜11/6（五）桃園 → 仁川</h3>
+      <div class="meta">
+        <span>出發機場：桃園國際機場（TPE）</span>
+        <span>抵達機場：仁川國際機場（ICN）</span>
+        <span>起飛：20:00（台灣時間）</span>
+        <span>抵達：約 23:30（韓國時間）</span>
+        <span>航空公司：台灣虎航（Tigerair Taiwan）</span>
+        <span>航班編號：IT602</span>
+      </div>
+      <div class="transport-route"><b>TPE</b><span class="arrow">→</span><b>ICN</b></div>
+    </div>
+    <div class="info-card">
+      <h3>回程｜11/11（三）釜山 → 桃園</h3>
+      <div class="meta">
+        <span>航空公司：台灣虎航（Tigerair Taiwan）</span>
+        <span>出發機場：金海國際機場（PUS）</span>
+        <span>抵達機場：桃園國際機場（TPE）</span>
+        <span>起飛：20:50（韓國時間）</span>
+        <span>航班編號：IT607</span>
+        <span>抵達時間：待補充</span>
+      </div>
+      <div class="transport-route"><b>PUS</b><span class="arrow">→</span><b>TPE</b></div>
+    </div>
+  </div>
+  <div class="note">航班時間依目前行程資料填入；回程抵達時間仍待補，請以電子機票為準。韓國比台灣快 1 小時。</div>
+
   <div class="info-grid">
     <div class="info-card"><h3>11/6 仁川機場 → 首爾站</h3><p>深夜抵達後搭計程車前往首爾站住宿，原行程預估約 60–80 分鐘。</p><div class="transport-route"><b>ICN</b><span class="arrow">→</span><b>Seoul Station</b></div></div>
     <div class="info-card"><h3>11/7 景福宮 → 聖水</h3><p>景福宮結束後前往聖水洞午餐；原行程抓約 30–40 分鐘。</p><div class="transport-route"><b>Gyeongbokgung</b><span class="arrow">→</span><b>Seongsu</b></div></div>
@@ -674,6 +707,8 @@ tr:last-child td{border-bottom:none}
   </div>
 </section>
 </div>
+
+<div class="page-view" id="page-restaurants"><section class="section-card"><h2>餐廳菜單翻譯</h2><p class="section-lead">依用餐日期整理餐廳。點開店名即可查看菜單翻譯；收到菜單照片後，再逐項補上韓文原文、中文說明、價格與推薦點法。</p><div class="menu-list"><details class="menu-entry"><summary><span class="menu-date">11/7</span><span><strong>Gebang Sikdang 聖水店</strong><small>게방식당 성수점</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/8</span><span><strong>Jeju Bokguk 河豚料理</strong><small>제주복국</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/8</span><span><strong>Woominam Centum 韓牛</strong><small>우미남 센텀점</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/9</span><span><strong>海雲臺五福豬肉湯飯</strong><small>해운대오복돼지국밥</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/9</span><span><strong>Old Mansion 老宅邸</strong><small>올드맨션</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/9</span><span><strong>鬱陵島花蝦・獨島蝦專賣店</strong><small>울릉도꽃새우</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/10</span><span><strong>탐복 松亭店</strong><small>탐복 해운대 송정점</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details><details class="menu-entry"><summary><span class="menu-date">11/10</span><span><strong>機張名品大蟹</strong><small>기장명품대게</small></span><span class="menu-chevron">＋</span></summary><div class="menu-body"><p class="menu-hint">菜單翻譯待補。之後可依餐廳實際菜單照片，逐項加入韓文、中文、價格與點餐備註。</p><div class="page-table-wrap"><table class="menu-table"><thead><tr><th>韓文菜名</th><th>中文翻譯／內容</th><th>價格</th><th>備註</th></tr></thead><tbody><tr><td colspan="4" class="menu-empty">尚未提供菜單，暫不填入未經確認的品項或價格。</td></tr></tbody></table></div></div></details></div></section></div>
 
 <div class="page-view" id="page-shopping">
 <section class="section-card">
